@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: equestions-config
+  name: demokotlin-config
   labels:
-    app: equestions
+    app: demokotlin
 data:
   USERDB: "developer"
   PASSWORDDB: "developerpass"

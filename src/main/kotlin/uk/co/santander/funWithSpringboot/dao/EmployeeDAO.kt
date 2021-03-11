@@ -14,6 +14,7 @@ class EmployeeDAO {
 
     fun getAllEmployess() = employeeRepository.findAll()
 
+
     fun addEmployee(employee: Employee) {
         employee.id = UUID.randomUUID().toString()
         employeeRepository.save(employee)

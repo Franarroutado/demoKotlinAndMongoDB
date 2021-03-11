@@ -15,7 +15,7 @@ class EmployeeController {
     @GetMapping("/",
     produces = ["application/json"])
     fun getEmployees() =
-    employeeDao.getAllEmployess()
+        employeeDao.getAllEmployess()
 
 
     @PostMapping("/")

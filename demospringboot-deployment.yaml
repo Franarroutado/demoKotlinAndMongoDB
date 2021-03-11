@@ -3,28 +3,28 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: equestions
-  name: equestions
+    app: demokotlin
+  name: demokotlin
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: equestions
+      app: demokotlin
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: equestions
+        app: demokotlin
     spec:
       containers:
-        - image: equestions
-          name: equestions
+        - image: demokotlin
+          name: demokotlin
           imagePullPolicy: Never
           resources: {}
           ports:
             - containerPort: 8080
           envFrom:
             - configMapRef:
-                name: equestions-config
+                name: demokotlin-config
 status: {}
