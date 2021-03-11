@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: equestions
+  name: equestions
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: equestions
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: equestions
+    spec:
+      containers:
+        - image: equestions
+          name: equestions
+          imagePullPolicy: Never
+          resources: {}
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: equestions-config
+status: {}
